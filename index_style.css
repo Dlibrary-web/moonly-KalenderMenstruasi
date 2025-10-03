@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Cookie&family=Imperial+Script&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=New+Rocker&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* index_style.css */
+body {
+    margin: 0;
+    font-family: 'Imperial+Script';
+    background: linear-gradient(to bottom, #780b0d, #fff4e4);
+    color: #333;
+}
+
+/* Gaya untuk Navigasi Tahun */
+.header-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+/* Gaya untuk Tulisan Moonly */
+.header-nav h1 {
+    margin: 0 30px;
+    color: #fff4e4;
+    font-size: 32px;
+}
+/* Gaya untuk tombol <> */
+.header-nav button {
+    background: #780b0d;
+    color: #fff4e4;
+    border: 2px solid #fff4e4;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+.header-nav button:hover {
+    background-color: #f7d4e3;
+}
+
+/* Gaya untuk Kontainer Kalender */
+.calendar-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.month {
+    background: #fff4e4;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    min-width: 250px; 
+}
+.month h2 {
+    text-align: center;
+    color: #780b0d;
+    margin-bottom: 10px;
+}
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+}
+.day {
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s, color 0.2s;
+    aspect-ratio: 1 / 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inactive {
+    color: #aaa;
+    cursor: default;
+}
+/* Penandaan Haid (yang diinput awal dan yang diklik) */
+.haid, .marked-haid { 
+    background-color: #cd2730;
+    color: #fff;
+}
+/* Penandaan Prediksi */
+.prediksi {
+    background-color: #e8c6cb;
+    color: #333;
+}
+@media (max-width: 1200px) {
+    .calendar-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 900px) {
+    .calendar-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .calendar-container {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Moonly</title>
+  <link rel="stylesheet" href="register_style.css">
+  <link rel="icon" type="image/jpg" href="asset/6ba65172-15b1-4b48-9044-68a20574ce1e.jpg">
+</head>
+<body>
+  <div class="container">
+    <div class="card" id="step1">
+      <h2>Register</h2>
+      <input type="text" id="nama" placeholder="Nama" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button onclick="saveStep1()">Lanjut</button>
+    </div>
+
+    <div class="card hidden" id="step2">
+      <h2>Berapa Usia Anda?</h2>
+      <input type="number" id="usia" placeholder="Masukkan usia" required>
+      <button onclick="saveStep2()">Lanjut</button>
+    </div>
+
+    <div class="card hidden" id="step3">
+      <h2>Haid 2 Periode Sebelumnya</h2>
+      <label>Tanggal Mulai:</label>
+      <input type="date" id="haid2Mulai">
+      <label>Tanggal Berakhir:</label>
+      <input type="date" id="haid2Akhir">
+      <button onclick="skipHaid2()">Saya tidak ingat</button>
+      <button onclick="saveStep3()">Lanjut</button>
+    </div>
+
+    <div class="card hidden" id="step4">
+      <h2>Haid Periode Sebelumnya</h2>
+      <label>Tanggal Mulai:</label>
+      <input type="date" id="haid1Mulai">
+      <label>Tanggal Berakhir:</label>
+      <input type="date" id="haid1Akhir">
+      <button onclick="skipHaid1()">Saya tidak ingat</button>
+      <button onclick="saveStep4()">Lanjut</button>
+    </div>
+
+    <div class="card hidden" id="step5">
+      <h2>Apakah Anda sudah menikah?</h2>
+      <select id="statusNikah">
+        <option value="">Pilih</option>
+        <option value="Sudah">Sudah</option>
+        <option value="Belum">Belum</option>
+      </select>
+      <button onclick="saveStep5()">Selesai</button>
+    </div>
+
+    <div class="card hidden" id="done">
+      <h2>Registrasi Berhasil!</h2>
+      <p>Data Anda telah disimpan.</p>
+    </div>
+  </div>
+
+  <script src="register_script.js"></script>
+</body>
+</html>
